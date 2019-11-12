@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modais</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css">
+
+</head>
+<body>
+
+	<div class="container">
+		<h1>Modal comum</h1>
+		<button class="btn btn-warning" data-toggle="modal" title="Clique para ativar o modal" data-target="#conteudoModalComum">Ativar Modal</button>
+
+		<!-- modal -->
+		<div id="conteudoModalComum" class="modal fade">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<h4>Meu primeiro modal</h4>
+						<button class="close" data-dismiss="modal" arial-label="Fechar">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-6">
+								Texto 1 do meu modal
+							</div>
+							<div class="col-6">
+								Texto 2 do meu modal
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<hr>
+	</div>
+
+	
+	<div class="container">
+		<h1>Modais Dinâmicos</h1>
+		<button class="btn btn-secondary" data-toggle="modal" data-nome="vla.eleut@gmail.com" data-target="#conteudoModal">Mensagem para e-mail Pessoal</button>
+
+		<button class="btn btn-secondary" data-toggle="modal" data-nome="Vlademir.Eleuterio2@br.experian.com" data-target="#conteudoModal">Mensagem para e-mail Corporativo</button>
+
+		<!-- modal -->
+		<div id="conteudoModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<h4 class="modal-title">Meu primeiro modal</h4>
+						<button class="close" data-dismiss="modal" arial-label="Fechar">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-4 text">
+								<span>Destinatário: </span>
+							</div>
+							<div class="col-8">
+								<input type="text" name="para" class="form-control">
+							</div>
+						</div>
+						<br><br>
+						<div class="row">
+							<div class="col-4">
+								<span>Mensagem:</span>
+							</div>
+							<div class="col-8">
+								<textarea class="form-control"></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+		        <div class="col text-center"> 
+		        	<hr>
+		        	<a href="index.html"><button class="btn btn-primary center-block">Voltar</button></a>
+		        </div>
+		    </div>
+		</div>
+		<script src="public/js/jquery.js"></script>
+		<script src="public/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript">
+			$('#conteudoModal').on('show.bs.modal', function(event){
+				var button = $(event.relatedTarget);
+				var recipient = button.data('nome');
+				var modal = $(this);
+				modal.find('.modal-title').text('Mensagem para '+recipient);
+				modal.find('.modal-body input').val(recipient);
+
+			});
+		</script>
+	</footer>
+</body>
+</html>

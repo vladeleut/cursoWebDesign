@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jumbotron & Cards</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css">
+
+</head>
+<body>
+	<!-- <div class="container">
+		<h1>Jumbotron & Cards</h1>
+		<div class="jumbotron">
+			<h1 class="display-4">Eu sou um jumbotron</h1>
+		</div>
+	</div>
+
+	exemplo aula: jumbotron fluid: -->
+	<div class="jumbotron">
+		<div class="container-fluid">
+			<h1 class="display-4">Eu sou um jumbotron fluid</h1>
+			<p class="lead">Este é o primeiro jumbotron</p>
+			<hr>
+			<a href="#" class="btn btn-primary">Saiba mais</a>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+
+			<div class="col-3">
+				<div class="card bg-light">
+					<img src="public/img/natureza4.jpeg" class="rounded-circle">
+					<div class="card-body">
+						<h5 class="card-title">Meu Card 1</h5>
+						<p class="card-text">Olá, este é meu primeiro card. Aqui ficará descrito as informações que quero exibir</p>
+						<a href="#" class="btn btn-primary">Mais infos</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="card border border-0">
+					<img src="public/img/natureza4.jpeg" class="rounded-pill">
+					<div class="card-body">
+						<h5 class="card-title">Meu Card 2</h5>
+						<p class="card-text">Olá, este é meu segundo card. Aqui ficará descrito as informações que quero exibir</p>
+						<a href="#" class="btn btn-primary">Mais infos</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="card border border-right-0 border-left-0">
+					<img src="public/img/natureza4.jpeg" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">Meu Card 3</h5>
+						<p class="card-text">Olá, este é meu terceiro card. Aqui ficará descrito as informações que quero exibir</p>
+						<a href="#" class="btn btn-primary">Mais infos</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="card border border-primary">
+					<img src="public/img/natureza4.jpeg" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">Meu Card 4</h5>
+						<p class="card-text">Olá, este é meu quarto card. Aqui ficará descrito as informações que quero exibir</p>
+						<a href="#" class="btn btn-primary">Mais infos</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col text-left"><!-- é o alinhamento padrão -->
+				<p class="display-4">Trabalhando com o texto</p>
+				<p>Meu texto </p>
+				<p class="text-center">Meu texto no centro</p><!-- Posso sobrepor o padrão -->
+				<p class="text-primary">Meu texto colorido usando as classes do bootstrap: Primary</p>
+				<p class="text-secondary">Meu texto colorido usando as classes do bootstrap: Secodary</p>
+				<p class="text-success">Meu texto colorido usando as classes do bootstrap: Success</p>
+				<p class="text-warning">Meu texto colorido usando as classes do bootstrap: Warning</p>
+				<p class="text-info">Meu texto colorido usando as classes do bootstrap: info</p>
+				<p class="text-light bg-dark">Meu texto colorido usando as classes do bootstrap: light</p>
+				<p class="text-dark">Meu texto colorido usando as classes do bootstrap: dark</p>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+		        <div class="col text-center"> 
+		        	<hr>
+		        	<a href="index.html"><button class="btn btn-primary center-block">Voltar</button></a>
+		        </div>
+		    </div>
+		</div>
+		<script src="public/js/jquery.js"></script>
+		<script src="public/js/bootstrap.bundle.min.js"></script>
+	</footer>
+</body>
+</html>

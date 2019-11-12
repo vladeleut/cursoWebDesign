@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Popovers e Tooltips</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css">
+
+</head>
+<body>
+	<div class="container">
+		<h1>Popover</h1>
+		<button class="btn btn-primary" data-toggle="popover" data-content="Posso ter um popover com título" data-placement="top" title="Título">Meu Popover</button>
+		<button class="btn btn-primary" data-toggle="popover" data-content="Conteúdo do popover" data-placement="left">Meu Popover</button>
+		<button class="btn btn-primary" data-toggle="popover" data-content="Conteúdo do popover" data-placement="bottom">Meu Popover</button>
+		<button class="btn btn-primary" data-toggle="popover" data-content="Conteúdo do popover" data-placement="right">Meu Popover</button>
+		
+	</div>
+
+	<div class="container">
+		<h1>Tooltips</h1>
+		<button class="btn btn-primary" data-toggle="tooltip" title="Título" data-placement="top">Meu Popover</button>
+		<button class="btn btn-primary" data-toggle="tooltip" title="Só" data-placement="left" >Meu Popover</button>
+		<button class="btn btn-primary" data-toggle="tooltip" title="tem" data-placement="bottom">Meu Popover</button>
+		<button class="btn btn-primary" data-toggle="tooltip" title="Título" data-placement="right">Meu Popover</button>
+		
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+		        <div class="col text-center">
+		        	<hr> 
+		        	<a href="index.html"><button class="btn btn-primary center-block">Voltar</button></a>
+		        </div>
+		    </div>
+		</div>
+		<script src="public/js/jquery.js"></script>
+		<script src="public/js/bootstrap.bundle.min.js"></script>
+
+		<script type="text/javascript">
+			$(function(){
+				$('[data-toggle="popover"]').popover();
+			});
+			$(function(){
+				$('[data-toggle="tooltip"]').tooltip();
+			});
+		</script>
+	</footer>
+</body>
+</html>
